@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1490969970 source:e:\algorithm\msort\msort.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	<string.h>
+
+1490969920 source:e:\algorithm\msort\main.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	<string.h>
+	"msort.h"
+
+1490969085 e:\algorithm\msort\msort.h
+
