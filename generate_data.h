@@ -1,0 +1,7 @@
+#ifndef GENERATE_DATA_H_INCLUDED
+#define GENERATE_DATA_H_INCLUDED
+
+int randNum();
+
+
+#endif // GENERATE_DATA_H_INCLUDED
