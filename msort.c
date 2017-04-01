@@ -17,7 +17,7 @@ void swap(const void* a, const void* b, int size)
     }
 }
 
-void Qsort(void* base, int left, int right, int size, int (*cmp)(const void* a, const void* b))
+void msort(void* base, int left, int right, int size, int (*cmp)(const void* a, const void* b))
 {
     int i;
     //assert(base != NULL && size >= 1 && cmp != NULL);    /* left may be < 0 because of the last - 1 */
@@ -37,8 +37,8 @@ void Qsort(void* base, int left, int right, int size, int (*cmp)(const void* a, 
         }
     }
     swap(pleft, plast, size);
-    Qsort(base, left, last - 1, size, cmp);
-    Qsort(base, last + 1, right, size, cmp);
+    msort(base, left, last - 1, size, cmp);
+    msort(base, last + 1, right, size, cmp);
 }
 
 int cmp_string(const void* a, const void* b)
@@ -68,7 +68,7 @@ int cmp_int(const void* a, const void* b)
 int cmp_double(const void* a, const void* b)
 {
     //assert(a != NULL && b != NULL);
-    /*const double* lhs = (const double*)a;
+    const double* lhs = (const double*)a;
     const double* rhs = (const double*)b;
     if (*lhs < *rhs) {
         return -1;
@@ -76,7 +76,7 @@ int cmp_double(const void* a, const void* b)
         return 0;
     } else {
         return 1;
-    }*/
-    return *(double*)a-*(double*)b;
+    }
+    //return *(double*)a-*(double*)b;
 }
 
